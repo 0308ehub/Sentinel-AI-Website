@@ -79,6 +79,10 @@ This project is configured and ready for Vercel deployment.
    - Push your code to GitHub, GitLab, or Bitbucket
    - Import your repository in the [Vercel Dashboard](https://vercel.com/new)
    - Vercel will automatically detect Next.js and configure the build settings
+   - **Important:** In Project Settings → General → Build & Development Settings:
+     - Framework Preset should be set to **Next.js** (auto-detected)
+     - **Do NOT set an Output Directory** - leave it empty (Next.js uses `.next` automatically)
+     - Build Command: `next build` (or leave as default)
    - Click "Deploy"
 
 2. **Via Vercel CLI:**
@@ -90,8 +94,17 @@ This project is configured and ready for Vercel deployment.
 ### Build Settings (Auto-detected by Vercel)
 - **Framework Preset:** Next.js
 - **Build Command:** `next build`
-- **Output Directory:** `.next`
+- **Output Directory:** (empty/not set - Next.js handles this automatically)
 - **Install Command:** `npm install` (or `yarn install` / `pnpm install`)
+
+### Troubleshooting
+
+If you see an error about "No Output Directory named 'public'":
+1. Go to your project in Vercel Dashboard
+2. Navigate to **Settings** → **General** → **Build & Development Settings**
+3. **Remove/clear the Output Directory field** (leave it empty)
+4. Ensure Framework Preset is set to **Next.js**
+5. Redeploy
 
 ### Environment Variables
 If you need to add environment variables later, you can add them in the Vercel dashboard under Project Settings → Environment Variables.
