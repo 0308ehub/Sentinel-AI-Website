@@ -1,6 +1,6 @@
 export default function SecuritySection() {
   return (
-    <section id="security" className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <section id="security" className="max-w-6xl mx-auto px-4 py-16 md:py-24">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-text-main mb-4">
           Enterprise-grade security and controls

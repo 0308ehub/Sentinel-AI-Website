@@ -1,6 +1,10 @@
+'use client'
+
+import { openCalendlyPopup } from '../utils/calendly'
+
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <section className="max-w-6xl mx-auto px-4 py-16 md:py-24">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column */}
         <div className="space-y-6">
@@ -11,7 +15,10 @@ export default function Hero() {
             Sentinel reviews financial records, contracts, and internal communications to surface accounting violations, anomalies, and compliance risks—with explainable findings and citations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button className="bg-accent-yellow hover:bg-accent-yellow-dark px-8 py-3 rounded-lg font-medium text-text-main transition-colors">
+            <button 
+              onClick={() => openCalendlyPopup()}
+              className="bg-accent-yellow hover:bg-accent-yellow-dark px-8 py-3 rounded-lg font-medium text-text-main transition-colors"
+            >
               Request demo
             </button>
             <button className="border-2 border-border-subtle hover:border-text-muted px-8 py-3 rounded-lg font-medium text-text-main transition-colors">
@@ -28,9 +35,42 @@ export default function Hero() {
               <h3 className="text-xl font-semibold text-text-main">Enron Full Test</h3>
               <p className="text-sm text-orange-600 mt-1">Internal audit case</p>
             </div>
-            <button className="bg-accent-yellow hover:bg-accent-yellow-dark px-4 py-2 rounded-lg text-sm font-medium text-text-main transition-colors">
+          </div>
+
+          {/* Upload Controls */}
+          <div className="mb-4 flex gap-3 items-center">
+            <button className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+              </svg>
+              Upload All Files
+            </button>
+            <input 
+              type="text" 
+              placeholder="Specify any specific details or things to focus on"
+              className="flex-1 px-4 py-2 border border-border-subtle rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent-yellow"
+            />
+            <button className="bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2 rounded-lg text-sm font-medium text-text-main transition-colors">
               Audit
             </button>
+          </div>
+
+          {/* File Upload Section */}
+          <div className="mb-4 pb-4 border-b border-border-subtle">
+            <div className="mb-2">
+              <label className="text-sm font-medium text-text-main">File</label>
+            </div>
+            <div className="bg-white border border-border-subtle rounded-lg p-3 flex items-center justify-between">
+              <span className="text-sm text-text-main truncate flex-1">
+                ConsolidatedBalanceSheetEnronCorp 2000 (1).pdf
+              </span>
+              <div className="flex-shrink-0 ml-2">
+                <svg className="w-3 h-3 text-text-muted animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Analysis Output */}

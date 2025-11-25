@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-text-main text-white">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Mission */}
           <div className="md:col-span-1">

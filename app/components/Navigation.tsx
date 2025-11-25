@@ -1,13 +1,14 @@
 'use client'
 
 import { useState } from 'react'
+import { openCalendlyPopup } from '../utils/calendly'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border-subtle">
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-bold text-text-main">Sentinel</div>
 
@@ -32,7 +33,10 @@ export default function Navigation() {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2.5 rounded-lg font-medium text-text-main transition-colors">
+          <button 
+            onClick={() => openCalendlyPopup()}
+            className="bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2.5 rounded-lg font-medium text-text-main transition-colors"
+          >
             Request demo
           </button>
         </div>
@@ -55,7 +59,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-border-subtle px-6 py-4 space-y-4">
+        <div className="md:hidden bg-white border-t border-border-subtle px-4 py-4 space-y-4">
           <a href="#product" className="block text-text-muted hover:text-text-main transition-colors">
             Product
           </a>
@@ -71,7 +75,10 @@ export default function Navigation() {
           <a href="#resources" className="block text-text-muted hover:text-text-main transition-colors">
             Resources
           </a>
-          <button className="w-full bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2.5 rounded-lg font-medium text-text-main transition-colors mt-4">
+          <button 
+            onClick={() => openCalendlyPopup()}
+            className="w-full bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2.5 rounded-lg font-medium text-text-main transition-colors mt-4"
+          >
             Request demo
           </button>
         </div>

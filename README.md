@@ -107,7 +107,30 @@ If you see an error about "No Output Directory named 'public'":
 5. Redeploy
 
 ### Environment Variables
-If you need to add environment variables later, you can add them in the Vercel dashboard under Project Settings → Environment Variables.
+
+#### Calendly Integration
+
+To enable the "Request demo" buttons to open a Calendly scheduling popup:
+
+1. **Get your Calendly username:**
+   - Sign up or log in to [Calendly](https://calendly.com)
+   - Your username is the part after `calendly.com/` in your Calendly URL
+   - Example: If your URL is `https://calendly.com/john-doe`, your username is `john-doe`
+
+2. **Set up the environment variable:**
+   - Create a `.env.local` file in the root directory (copy from `.env.example`)
+   - Add: `NEXT_PUBLIC_CALENDLY_URL=your-username`
+   - Replace `your-username` with your actual Calendly username
+
+3. **For Vercel deployment:**
+   - Go to Project Settings → Environment Variables
+   - Add `NEXT_PUBLIC_CALENDLY_URL` with your Calendly username as the value
+   - Redeploy your application
+
+**Note:** If you don't set this variable, the buttons will still work but will try to open `calendly.com/your-username` (which won't exist). Make sure to set this before deploying to production.
+
+#### Other Environment Variables
+If you need to add other environment variables later, you can add them in the Vercel dashboard under Project Settings → Environment Variables.
 
 ## Features
 

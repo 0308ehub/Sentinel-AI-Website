@@ -1,6 +1,6 @@
 export default function FindingsSection() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <section className="max-w-6xl mx-auto px-4 py-16 md:py-24">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column - Text */}
         <div className="space-y-4">
@@ -29,7 +29,7 @@ export default function FindingsSection() {
         {/* Right Column - Product Card */}
         <div className="bg-white rounded-xl border border-border-subtle shadow-sm p-6">
           {/* Tabs */}
-          <div className="flex items-center gap-2 mb-4 border-b border-border-subtle -mx-6 px-6">
+          <div className="flex items-center gap-2 mb-4 border-b border-border-subtle -mx-4 px-4">
             <button className="text-sm font-medium px-4 py-3 border-b-2 border-accent-yellow text-text-main">
               General Audit
             </button>
