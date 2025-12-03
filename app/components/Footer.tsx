@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Logo and Mission */}
           <div className="md:col-span-1">
             <img 
-              src="/logowords.png" 
+              src="/reallogo.png" 
               alt="Sentinel" 
               className="h-6 mb-3 brightness-0 invert"
             />
