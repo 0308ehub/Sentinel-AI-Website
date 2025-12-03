@@ -7,37 +7,37 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border-subtle">
-      <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="relative z-50 pt-4">
+      <nav className="max-w-7xl mx-auto px-6 pt-2 pb-2 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold text-text-main">Sentinel</div>
+        <div className="flex items-center flex-shrink-0">
+          <img 
+            src="/realcropped.png" 
+            alt="Sentinel" 
+            className="h-10 md:h-12 w-auto"
+          />
+        </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#product" className="text-text-muted hover:text-text-main transition-colors">
+        {/* Desktop Navigation - Centered */}
+        <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
+          <a href="#product" className="text-base text-text-muted hover:text-text-main transition-colors">
             Product
           </a>
-          <a href="#use-cases" className="text-text-muted hover:text-text-main transition-colors">
-            Use Cases
-          </a>
-          <a href="#security" className="text-text-muted hover:text-text-main transition-colors">
+          <a href="#security" className="text-base text-text-muted hover:text-text-main transition-colors">
             Security
           </a>
-          <a href="#pricing" className="text-text-muted hover:text-text-main transition-colors">
+          <a href="#pricing" className="text-base text-text-muted hover:text-text-main transition-colors">
             Pricing
-          </a>
-          <a href="#resources" className="text-text-muted hover:text-text-main transition-colors">
-            Resources
           </a>
         </div>
 
         {/* CTA Button */}
-        <div className="hidden md:block">
+        <div className="hidden md:block flex-shrink-0">
           <button 
             onClick={() => openCalendlyPopup()}
-            className="bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2.5 rounded-lg font-medium text-text-main transition-colors"
+            className="bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2.5 rounded-lg text-base font-medium text-text-main transition-colors"
           >
-            Request demo
+            Request Demo
           </button>
         </div>
 
@@ -59,12 +59,9 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-border-subtle px-4 py-4 space-y-4">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border border-border-subtle rounded-lg shadow-lg mx-6 mt-2 px-4 py-4 space-y-4">
           <a href="#product" className="block text-text-muted hover:text-text-main transition-colors">
             Product
-          </a>
-          <a href="#use-cases" className="block text-text-muted hover:text-text-main transition-colors">
-            Use Cases
           </a>
           <a href="#security" className="block text-text-muted hover:text-text-main transition-colors">
             Security
@@ -72,14 +69,11 @@ export default function Navigation() {
           <a href="#pricing" className="block text-text-muted hover:text-text-main transition-colors">
             Pricing
           </a>
-          <a href="#resources" className="block text-text-muted hover:text-text-main transition-colors">
-            Resources
-          </a>
           <button 
             onClick={() => openCalendlyPopup()}
             className="w-full bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-2.5 rounded-lg font-medium text-text-main transition-colors mt-4"
           >
-            Request demo
+            Request Demo
           </button>
         </div>
       )}

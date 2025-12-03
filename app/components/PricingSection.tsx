@@ -4,44 +4,146 @@ import { openCalendlyPopup } from '../utils/calendly'
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="max-w-6xl mx-auto px-4 py-16 md:py-24">
-      <div className="bg-white rounded-xl border border-border-subtle shadow-sm p-8 md:p-12 text-center max-w-3xl mx-auto">
+    <section id="pricing" className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+      <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-text-main mb-4">
-          Contact sales
+          Simple, transparent pricing
         </h2>
-        <p className="text-lg text-text-muted mb-8 max-w-xl mx-auto">
-          We work with audit teams of all sizes. Tell us about your environment and we'll customize a plan that fits your needs and budget.
+        <p className="text-lg text-text-muted max-w-2xl mx-auto">
+          Choose the plan that fits your team size and needs
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <button 
-            onClick={() => openCalendlyPopup()}
-            className="bg-accent-yellow hover:bg-accent-yellow-dark px-8 py-3 rounded-lg font-medium text-text-main transition-colors"
-          >
-            Request demo
-          </button>
-          <button className="border-2 border-border-subtle hover:border-text-muted px-8 py-3 rounded-lg font-medium text-text-main transition-colors">
-            Talk to us
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Free Plan */}
+        <div className="bg-white rounded-2xl border border-border-subtle shadow-sm p-8 hover:shadow-lg transition-shadow">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-text-main mb-2">Free</h3>
+            <div className="flex items-baseline justify-center gap-1 mb-4">
+              <span className="text-4xl font-bold text-text-main">$0</span>
+              <span className="text-text-muted">/month</span>
+            </div>
+            <p className="text-text-muted text-sm">
+              For individuals who are interested in Sentinel's AI features and convenient automations for personal use
+            </p>
+          </div>
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Simple spreadsheet automations</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Limited automations and automation complexity</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Limited daily use of the internal audit LLM</span>
+            </li>
+          </ul>
+          <button className="w-full border-2 border-border-subtle hover:border-accent-yellow/50 hover:text-accent-yellow-dark px-6 py-3 rounded-lg font-medium text-text-main transition-all duration-300">
+            Get Started
           </button>
         </div>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-text-muted">
-          <a 
-            href="tel:+16517882997" 
-            className="flex items-center gap-2 hover:text-text-main transition-colors"
+
+        {/* Small Teams Plan */}
+        <div className="bg-white rounded-2xl border-2 border-accent-yellow shadow-lg p-8 hover:shadow-xl transition-shadow relative">
+          <div className="absolute top-0 right-0 bg-accent-yellow text-text-main px-3 py-1 rounded-bl-lg rounded-tr-2xl text-xs font-semibold">
+            Popular
+          </div>
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-text-main mb-2">Small Teams</h3>
+            <div className="flex items-baseline justify-center gap-1 mb-4">
+              <span className="text-4xl font-bold text-text-main">$50</span>
+              <span className="text-text-muted">/month</span>
+            </div>
+            <p className="text-text-muted text-sm">
+              Teams of 5-10 that need larger automations, utilize Sentinel's AI features across various back office functions, helping small back office teams automate workflows
+            </p>
+          </div>
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Access AI features across various back office functions</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>No limit automations for complex and simple tasks</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Limited use of the internal audit LLM</span>
+            </li>
+          </ul>
+          <button 
+            onClick={() => openCalendlyPopup()}
+            className="w-full bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-3 rounded-lg font-medium text-text-main transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-yellow/30"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            <span>(651) 788-2997</span>
-          </a>
-          <a 
-            href="mailto:0308ehub@gmail.com" 
-            className="flex items-center gap-2 hover:text-text-main transition-colors"
+            Get Started
+          </button>
+        </div>
+
+        {/* Enterprise Plan */}
+        <div className="bg-white rounded-2xl border border-border-subtle shadow-sm p-8 hover:shadow-lg transition-shadow">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-text-main mb-2">Enterprise</h3>
+            <div className="flex items-baseline justify-center gap-1 mb-4">
+              <span className="text-4xl font-bold text-text-main">Custom</span>
+            </div>
+            <p className="text-text-muted text-sm">
+              For large teams that need advanced AI capabilities, complex automations across various functions and our premier internal audit services
+            </p>
+          </div>
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Unlimited AI capabilities</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Unlimited automations across all functions</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Unlimited use of the internal audit LLM</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Premier internal audit services</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-text-muted">
+              <svg className="w-5 h-5 text-accent-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Dedicated support</span>
+            </li>
+          </ul>
+          <button 
+            onClick={() => openCalendlyPopup()}
+            className="w-full bg-accent-yellow hover:bg-accent-yellow-dark px-6 py-3 rounded-lg font-medium text-text-main transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-yellow/30"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <span>0308ehub@gmail.com</span>
-          </a>
+            Contact Us
+          </button>
         </div>
       </div>
     </section>

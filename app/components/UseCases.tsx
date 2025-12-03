@@ -1,66 +1,66 @@
 export default function UseCases() {
   const useCases = [
     {
-      title: 'Internal audit of financial statements',
+      title: 'Email Organization',
       points: [
-        'Review quarterly and annual financial reports',
-        'Identify accounting errors and irregularities',
-        'Verify compliance with GAAP and IFRS standards',
+        'Automatically categorize and organize email communications',
+        'Extract key information from email threads',
+        'Flag important compliance and audit-related messages',
       ],
     },
     {
-      title: 'Vendor and procurement fraud screening',
+      title: 'Employee Access Management',
       points: [
-        'Analyze vendor contracts and purchase orders',
-        'Detect duplicate payments and suspicious patterns',
-        'Flag unusual relationships and kickback schemes',
+        'Monitor and audit employee access permissions',
+        'Detect unauthorized access and policy violations',
+        'Automate access reviews and compliance reporting',
       ],
     },
     {
-      title: 'SOX and internal controls testing',
+      title: 'Vendor Procurement',
       points: [
-        'Test design and operating effectiveness of controls',
-        'Document control deficiencies and weaknesses',
-        'Support management assessment and external audit',
+        'Automate vendor contract analysis and review',
+        'Detect duplicate payments and procurement fraud',
+        'Monitor vendor relationships and compliance',
       ],
     },
     {
-      title: 'Investigations into whistleblower reports',
+      title: 'Internal Audit Automation',
       points: [
-        'Rapidly analyze relevant documents and communications',
-        'Surface patterns across multiple data sources',
-        'Build evidence trail for compliance investigations',
+        'Automate the internal audit process end-to-end',
+        'Review financial statements and identify anomalies',
+        'Generate compliance reports with explainable findings',
       ],
     },
     {
-      title: 'Reviewing contracts and side letters',
+      title: 'Legacy System Integration',
       points: [
-        'Extract key terms and obligations from contracts',
-        'Compare side agreements against master contracts',
-        'Identify non-standard terms and hidden risks',
+        'Plug into existing systems and spreadsheets',
+        'Automate data extraction and processing',
+        'Eliminate manual data entry across systems',
       ],
     },
     {
-      title: 'Transaction testing and sampling',
+      title: 'Compliance Monitoring',
       points: [
-        'Process large volumes of transactions efficiently',
-        'Apply statistical sampling methodologies',
-        'Focus manual review on highest-risk items',
+        'Continuous monitoring of compliance requirements',
+        'Automated alerts for policy violations',
+        'LLM powered analysis of financial and audit data',
       ],
     },
   ]
 
   return (
-    <section id="use-cases" className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+    <section id="use-cases" className="max-w-7xl mx-auto px-6 py-20 md:py-32">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-text-main mb-4">
-          Use Sentinel across your audit lifecycle
+          Automations for back office, compliance, and auditing
         </h2>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {useCases.map((useCase, index) => (
-          <div key={index} className="bg-white rounded-xl border border-border-subtle shadow-sm p-6">
+          <div key={index} className="bg-white rounded-2xl border border-border-subtle shadow-sm p-6 hover:shadow-md transition-shadow">
             <h3 className="text-lg font-semibold text-text-main mb-3">{useCase.title}</h3>
             <ul className="space-y-2 text-text-muted text-sm">
               {useCase.points.map((point, pointIndex) => (

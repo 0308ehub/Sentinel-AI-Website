@@ -3,13 +3,17 @@ export default function Footer() {
 
   return (
     <footer className="bg-text-main text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Mission */}
           <div className="md:col-span-1">
-            <div className="text-2xl font-bold mb-3">Sentinel</div>
+            <img 
+              src="/logowords.png" 
+              alt="Sentinel" 
+              className="h-6 mb-3 brightness-0 invert"
+            />
             <p className="text-gray-400 text-sm">
-              AI-powered audit assistant for internal compliance teams.
+              The future of work, tailored automation for the back office.
             </p>
           </div>
 
@@ -18,13 +22,13 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#product" className="hover:text-white transition-colors">Features</a>
-              </li>
-              <li>
-                <a href="#use-cases" className="hover:text-white transition-colors">Use Cases</a>
+                <a href="#product" className="hover:text-white transition-colors">Product</a>
               </li>
               <li>
                 <a href="#security" className="hover:text-white transition-colors">Security</a>
+              </li>
+              <li>
+                <a href="#use-cases" className="hover:text-white transition-colors">Use Cases</a>
               </li>
               <li>
                 <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
@@ -37,13 +41,13 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#resources" className="hover:text-white transition-colors">Documentation</a>
+                <a href="#contact" className="hover:text-white transition-colors">Request Demo</a>
               </li>
               <li>
-                <a href="#resources" className="hover:text-white transition-colors">Status</a>
+                <a href="#contact" className="hover:text-white transition-colors">Contact</a>
               </li>
               <li>
-                <a href="#resources" className="hover:text-white transition-colors">Support</a>
+                <a href="#documentation" className="hover:text-white transition-colors">Documentation</a>
               </li>
             </ul>
           </div>
@@ -53,10 +57,10 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#legal" className="hover:text-white transition-colors">Legal</a>
               </li>
               <li>
-                <a href="#terms" className="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#trademark" className="hover:text-white transition-colors">Trademark</a>
               </li>
             </ul>
           </div>
