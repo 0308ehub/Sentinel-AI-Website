@@ -3,8 +3,20 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Sentinel - AI-powered audit assistant',
-  description: 'AI-powered audit assistant for internal compliance teams',
+  title: 'Sentinel – AI Product Discovery',
+  description: 'Turn customer feedback into prioritized product opportunities. Sentinel synthesizes support tickets, interviews, and user research into actionable insights for product teams.',
+  openGraph: {
+    title: 'Sentinel – AI Product Discovery',
+    description: 'Turn customer feedback into prioritized product opportunities.',
+    url: 'https://sentinelai.one',
+    siteName: 'Sentinel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sentinel – AI Product Discovery',
+    description: 'Turn customer feedback into prioritized product opportunities.',
+  },
 }
 
 export default function RootLayout({
@@ -15,10 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </head>
       <body>
         {children}
