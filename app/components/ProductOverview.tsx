@@ -2,46 +2,46 @@ const features = [
   {
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
       </svg>
     ),
-    title: 'Upload any evidence',
+    title: 'Describe it. Sentinel plans it.',
     description:
-      'Drop in support tickets, interview transcripts, survey exports, or raw CSVs. Sentinel parses PDFs, spreadsheets, and structured data automatically — no formatting required.',
-    chips: ['CSV / Excel', 'PDF', 'Interviews', 'Support logs'],
+      'Tell Sentinel your goal in plain English. It breaks projects into epics, tasks, and subtasks with effort estimates — no ticket marathons, no alignment meetings.',
+    chips: ['Goal → task decomposition', 'Effort estimation', 'Critical path mapping'],
   },
   {
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'AI-powered synthesis',
+    title: 'Real-time awareness, zero updates.',
     description:
-      'Sentinel clusters pain points, surfaces recurring themes, and extracts structured insights across thousands of data points — in seconds, not days.',
-    chips: ['Pain point clustering', 'Theme extraction', 'Segment analysis'],
+      "Sentinel connects to GitHub, Linear, Jira, and Slack. It knows what's done, what's blocked, and what's at risk — before your standup.",
+    chips: ['GitHub · Linear · Jira', 'PR-based progress tracking', 'Blocker detection'],
   },
   {
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
       </svg>
     ),
-    title: 'Prioritized opportunities',
+    title: 'Plans that adapt when reality shifts.',
     description:
-      'Every opportunity is scored across five dimensions — impact, urgency, confidence, effort, and risk — with evidence citations and target segments identified.',
-    chips: ['5-dimension scoring', 'Evidence-linked', 'Segment targeting'],
+      "Scope creeps, someone's out, a dependency slips — Sentinel re-routes automatically and drafts the stakeholder update so you don't have to.",
+    chips: ['Dynamic re-planning', 'Auto stakeholder updates', 'Timeline adjustments'],
   },
   {
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: 'Ship to your workflow',
+    title: 'Works with your whole stack.',
     description:
-      'Export opportunities as Jira tickets, Linear issues, or Slack summaries. Keep your team in their existing tools while benefiting from AI-driven discovery.',
-    chips: ['Jira', 'Linear', 'Slack', 'Export to CSV'],
+      'No migration, no disruption. Sentinel sits on top of the tools your team already uses and makes them smarter — not another tool to babysit.',
+    chips: ['GitHub', 'Linear', 'Jira', 'Slack', 'Notion'],
   },
 ]
 
@@ -49,23 +49,20 @@ export default function ProductOverview() {
   return (
     <section id="features" className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 text-primary text-xs font-semibold uppercase tracking-widest mb-4">
             <span className="w-8 h-px bg-primary/40" />
-            Features
+            How it works
             <span className="w-8 h-px bg-primary/40" />
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-text-main tracking-tight mb-5">
-            Everything your PM team needs
+            Project management is finally autonomous
           </h2>
           <p className="text-lg text-text-muted leading-relaxed">
-            From raw customer data to actionable product strategy — Sentinel handles the synthesis
-            so you can focus on the decisions.
+            Sentinel doesn&apos;t just help you manage — it manages for you.
           </p>
         </div>
 
-        {/* Feature grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {features.map((feature, i) => (
             <div
