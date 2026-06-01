@@ -3,6 +3,9 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  verification: {
+    google: 'EsCLA0JY-PPf3YWMq0NBs2mTdvRtbzkwDBrx-dG0nRM',
+  },
   title: 'Sentinel – AI Product Discovery',
   description: 'Turn customer feedback into prioritized product opportunities. Sentinel synthesizes support tickets, interviews, and user research into actionable insights for product teams.',
   openGraph: {
